@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enunciate label="axiom-service-api"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://enunciate.webcohesion.com/schemas/enunciate-2.0.0.xsd">
+
+    <api-classes>
+        <include pattern="dev.educery.storage.**" />
+        <include pattern="dev.educery.domain.**" />
+        <include pattern="dev.educery.services.**" />
+    </api-classes>
+
+    <modules>
+        <c-xml-client disabled="true" />
+        <csharp-xml-client disabled="true" />
+        <!--<docs />-->
+        <gwt-json-overlay disabled="true" />
+        <idl disabled="true" />
+        <jackson disabled="false"
+          collapse-type-hierarchy="true" />
+        <jackson1 disabled="true" />
+        <java-json-client disabled="true" />
+        <java-xml-client disabled="true" />
+        <jaxb disabled="true" />
+        <jaxws disabled="true" />
+        <obj-c-xml-client disabled="true" />
+        <php-json-client disabled="true" />
+        <php-xml-client disabled="true" />
+        <ruby-json-client disabled="true" />
+        <swagger basePath="/api" />
+
+        <jaxrs groupBy="class">
+            <application path="api" />
+        </jaxrs>
+    </modules>
+
+    <disable-rule id="all.warnings" />
+    <webapp disabled="true" />
+
+</enunciate>

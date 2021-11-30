@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="dev.educery.manager.MenuController"
+    xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" >
+    <MenuBar fx:id="menuBar" >
+        <menus>
+            <Menu text="Contacts">
+                <items>
+                    <MenuItem text="New Contact ..." onAction="#handleNewAction" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                        </accelerator>
+                    </MenuItem>
+<!--                    <MenuItem text="Search Contacts ..." >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                        </accelerator>
+                    </MenuItem>-->
+                    <SeparatorMenuItem />
+                    <MenuItem text="Quit" onAction="#handleQuitAction" >
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="Q" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                        </accelerator>
+                    </MenuItem>
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="About" onAction="#handleAboutAction" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</VBox>

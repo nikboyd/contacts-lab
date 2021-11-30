@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="dev.educery.manager.ListController"
+    xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox>
+            <HBox alignment="CENTER_LEFT">
+                <padding><Insets bottom="0" left="10" right="10" top="0" /></padding>
+                <Label text="Section: " />
+                <ComboBox fx:id="listSection" />
+                <Label text="  Show: " />
+                <ComboBox fx:id="showID" />
+            </HBox>
+            <ListView fx:id="contactList" />
+        </VBox>
+    </center>
+    <bottom>
+        <HBox>
+            <padding><Insets bottom="10" left="10" right="10" top="5" /></padding>
+            <Label text="Messages:" />
+            <Label text="" fx:id="messageArea" />
+        </HBox>
+    </bottom>
+</BorderPane>

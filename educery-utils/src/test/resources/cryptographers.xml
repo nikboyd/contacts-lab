@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="EmailCryptographer" class="dev.educery.crypto.Symmetric">
+        <property name="seedValue" value="01234567012345670123456701234567" />
+        <property name="keyValue" value="76543210765432107654321076543210" />
+    </bean>
+
+    <bean id="AuthCryptographer" class="dev.educery.crypto.Symmetric">
+        <property name="seedValue" value="fedcba9876543210fedcba9876543210" />
+        <property name="keyValue" value="76543210765432107654321076543210" />
+    </bean>
+
+    <bean id="SymmetricMapper" class="dev.educery.crypto.Symmetric$Mapper">
+        <property name="mapElements" value=
+            "EmailCryptographer=reset,validation;
+            AuthCryptographer=auth" />
+    </bean>
+
+</beans>

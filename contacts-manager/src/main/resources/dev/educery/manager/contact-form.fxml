@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" 
+    fx:controller="dev.educery.manager.FormController"
+    xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+
+<GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+    <Label text="Contact" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="contactName" />
+      <columnConstraints>
+        <ColumnConstraints minWidth="70" prefWidth="70" maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="300" prefWidth="300" maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+</GridPane>
+<GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
+    <padding><Insets bottom="20" left="20" right="20" top="0" /></padding>
+    <Label text="Phones" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="like 888-999-9999" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="HOME:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="homePhone" />
+    <Label text="WORK:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="workPhone" />
+    <Label text="MOBILE:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="mobilePhone" />
+      <columnConstraints>
+        <ColumnConstraints minWidth="70" prefWidth="70" maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="300" prefWidth="300" maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+</GridPane>
+<GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+    <padding><Insets bottom="20" left="20" right="20" top="0" /></padding>
+    <Label text="Emails" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="like sample@host.com" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="HOME:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="homeEmail" />
+    <Label text="WORK:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="workEmail" />
+      <columnConstraints>
+        <ColumnConstraints minWidth="70" prefWidth="70" maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="300" prefWidth="300" maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+</GridPane>
+<GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="3">
+    <padding><Insets bottom="20" left="20" right="20" top="0" /></padding>
+    <Label text="Addresses" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="like 1234 Main St, Los Angeles, CA 90066" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="HOME:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="homeAddress" />
+    <Label text="WORK:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="workAddress" />
+    <Label text="BILLING:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="billAddress" />
+    <Label text="SHIPPING:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="shipAddress" />
+      <columnConstraints>
+        <ColumnConstraints minWidth="70" prefWidth="70" maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="300" prefWidth="300" maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+</GridPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
