@@ -32,33 +32,42 @@
         <version.java>1.8</version.java>
         <version.compiler.plugin>2.3.2</version.compiler.plugin>
     </properties>
+    
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>dev-educery</groupId>
                 <artifactId>contacts-service</artifactId>
-                <version>${version.contacts-libs}</version>
+                <version>2021.1001.1001</version>
             </dependency>
             <dependency>
                 <groupId>dev-educery</groupId>
                 <artifactId>contacts-domain</artifactId>
-                <version>${version.contacts-libs}</version>
+                <version>2021.1001.1001</version>
             </dependency>
             <dependency>
                 <groupId>dev-educery</groupId>
                 <artifactId>contacts-storage</artifactId>
-                <version>${version.contacts-libs}</version>
+                <version>2021.1001.1001</version>
             </dependency>
             <dependency>
                 <groupId>dev-educery</groupId>
                 <artifactId>educery-storage</artifactId>
-                <version>${version.educery-libs}</version>
+                <version>2021.1001.1001</version>
             </dependency>
             <dependency>
                 <groupId>dev-educery</groupId>
                 <artifactId>educery-utils</artifactId>
-                <version>${version.educery-libs}</version>
+                <version>2021.1001.1001</version>
             </dependency>
 
             <dependency>
