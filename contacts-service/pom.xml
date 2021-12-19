@@ -23,13 +23,13 @@
         <dependency>
             <groupId>dev-educery</groupId>
             <artifactId>educery-storage</artifactId>
-            <version>${version.educery-libs}</version>
+            <version>2021.1001.1001</version>
             <classifier>sources</classifier>
         </dependency>
         <dependency>
             <groupId>dev-educery</groupId>
             <artifactId>contacts-domain</artifactId>
-            <version>${version.contacts-libs}</version>
+            <version>2021.1001.1001</version>
             <classifier>sources</classifier>
         </dependency>
         <dependency>

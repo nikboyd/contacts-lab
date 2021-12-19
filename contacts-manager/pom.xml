@@ -31,7 +31,7 @@
         <dependency>
             <groupId>dev-educery</groupId>
             <artifactId>contacts-boot</artifactId>
-            <version>${version.contacts-libs}</version>
+            <version>2021.1001.1001</version>
         </dependency>
         <dependency>
             <groupId>dev-educery</groupId>
