@@ -92,7 +92,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Spring Boot][spring-boot] | spring-boot-starter-web | 2.5.5 | web service self-hosting |
 | [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.6 | JPA repository framework |
 | [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.5.7 | object-relational mapping |
-| [H2][h2-db] | com.h2.database:h2 | 1.4.200 | test object storage |
+| [H2][h2-db] | com.h2.database:h2 | 2.0.202 | test object storage |
 | [PostgreSQL][pg-db] | postgresql | 9.4.1212 | general object storage |
 | [Validation][valid] | hibernate-validator | 5.4.3 | data validation framework |
 | [JPA][persist] | javax.persistence-api | 2.2 | annotated persistence framework |
@@ -102,7 +102,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Binding XML][bind-xml] | com.sun.xml.bind:jaxb-impl | 2.3.3 | XML data binding |
 | [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.3 | data binding framework |
 | [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.12 | logging abstraction |
-| [Logging Implement][log4j] | log4j-core | 2.14.1 | logging framework |
+| [Logging Implement][log4j] | log4j-core | 2.17.0 | logging framework |
 
 ### Lab Tests
 
