@@ -26,6 +26,7 @@ public class ContactDialog implements Logging {
     private Dialog<Contact> dialog;
     private void closeDialog(ActionEvent event) { dialog.close(); event.consume(); }
 
+    static final String FontStyle = "-fx-font-family: 'serif'";
     private void buildDialog() {
         result = null;
         deleted = null;
@@ -34,6 +35,7 @@ public class ContactDialog implements Logging {
         dialog.setTitle("Contact");
         GridPane p = FormController.loadView();
         dialog.getDialogPane().setContent(p);
+        dialog.getDialogPane().setStyle(FontStyle);
     }
 
     private void buildDeleteButton(Contact... cs) {

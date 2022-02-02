@@ -35,7 +35,7 @@ First, be sure to start the [contact web service][contact-service] locally as it
 Then, you can launch the contact manager app as follows:
 
 ```
-java -jar contacts-manager/target/contact-manager*.jar
+java -jar contacts-manager/target/contact-manager-*.jar
 ```
 
 ### Gallery
