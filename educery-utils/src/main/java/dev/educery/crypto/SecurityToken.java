@@ -1,8 +1,9 @@
 package dev.educery.crypto;
 
 import java.util.*;
-import org.joda.time.DateTime;
-import org.joda.time.format.*;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormatter;
 import org.apache.commons.codec.binary.Hex;
 import dev.educery.utils.Logging;
 
@@ -35,7 +36,17 @@ public class SecurityToken implements Logging {
     /**
      * Formats token time stamps.
      */
-    public static final DateTimeFormatter TokenTimestampFormat = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
+    public static final DateTimeFormatter TokenTimestampFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    // normalize times using UTC
+    static final String StandardZoneName = "UTC";
+    static final ZoneId StandardZone = ZoneId.of(StandardZoneName);
+    static final ZoneOffset StandardOffset = ZoneOffset.UTC;
+
+    public static LocalDateTime now() { return LocalDateTime.now(); }
+    public static long timeNow() { return now().toInstant(StandardOffset).toEpochMilli(); }
+    public static LocalDateTime timeFrom(long msecs) {
+        return LocalDateTime.ofInstant(Instant.ofEpochMilli(msecs), StandardZone); }
 
     static final String Equals = "=";
     static final String Zeros = "0000000000000000";
@@ -46,10 +57,12 @@ public class SecurityToken implements Logging {
     static final long StandardValidity = 5 * 60 * Milliseconds; // 5 mins (in msecs)
 
     static final int TimestampIndex = 0;
-    static final int ValidityIndex = 1;
+    static final int ValidityIndex  = 1;
     static final int StandardValues = 2;
 
-    private long[] values = {DateTime.now().getMillis(), StandardValidity, 0};
+    private void validity(long secs) { if (secs >= 0) this.values[ValidityIndex] = secs * Milliseconds; }
+    private long validity() { return this.values[ValidityIndex] / Milliseconds; }
+    private long[] values = { timeNow(), StandardValidity, 0 };
     private String tokenName = "";
 
     /**
@@ -94,13 +107,12 @@ public class SecurityToken implements Logging {
     }
 
     public boolean isExpired() { return !this.isValid(); }
-    public boolean isValid() { return getValidity() == 0 ? true : getExpirationTime().isAfterNow(); }
-    public long getValidity() { return this.values[ValidityIndex] / Milliseconds; }
-    public SecurityToken withValidity(long seconds) {
-        if (seconds >= 0) this.values[ValidityIndex] = seconds * Milliseconds; return this; }
+    public boolean isValid() { return getValidity() == 0 ? true : getExpirationTime().isAfter(now()); }
+    public SecurityToken withValidity(long secs) { validity(secs); return this; }
+    public long getValidity() { return validity(); }
 
-    public DateTime getExpirationTime() { return getTimestamp().plus(this.values[ValidityIndex]); }
-    public String formatExpirationTime() { return getExpirationTime().toString(TokenTimestampFormat); }
+    public LocalDateTime getExpirationTime() { return getTimestamp().plus(values[ValidityIndex], ChronoUnit.MILLIS); }
+    public String formatExpirationTime() { return TokenTimestampFormat.format(getExpirationTime()); }
 
     /**
      * Adds a value to this token.
@@ -143,7 +155,7 @@ public class SecurityToken implements Logging {
     public String packaged() { return this.tokenName + Equals + this.toHex(); }
 
     public String getName() { return this.tokenName; }
-    public DateTime getTimestamp() { return new DateTime(this.values[TimestampIndex]); }
+    public LocalDateTime getTimestamp() { return timeFrom(this.values[TimestampIndex]); }
 
     public long getValue() { return this.values[StandardValues]; }
     public long getValue(int index) {
