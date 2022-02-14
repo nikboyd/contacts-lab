@@ -15,6 +15,8 @@ import dev.educery.storage.*;
 import dev.educery.domain.Contact.Kind;
 import static dev.educery.utils.Utils.*;
 import dev.educery.utils.Logging;
+import one.microstream.storage.embedded.types.EmbeddedStorage;
+import one.microstream.storage.embedded.types.EmbeddedStorageManager;
 
 /**
  * Confirms proper operation of sample models and their persistence.
@@ -32,6 +34,10 @@ public class RepositoryTest implements Logging {
 
     @Autowired StorageMechanism.Registry registry;
     public PhoneStorage phones() { return StorageMechanism.get(PhoneNumber.class); }
+
+    @Test public void streamTest() {
+        final EmbeddedStorageManager storageManager = EmbeddedStorage.start();
+    }
 
     @Test public void registeredStores() { report("registered stores count = " + registry.size()); }
 
