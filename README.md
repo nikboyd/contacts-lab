@@ -97,7 +97,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Validation][valid] | hibernate-validator | 5.4.3 | data validation framework |
 | [JPA][persist] | javax.persistence-api | 2.2 | annotated persistence framework |
 | [Mail][mail] | javax.mail:mail | 1.4.7 | email library |
-| [Time][time] | java.time.* | 8+ | standard date and time handling, after [Joda-time][joda-time] |
+| [Time][std-time] | java.time.* | 8+ | standard date and time handling, after [Joda-time][joda-time] |
 | [Binding JSON][bind-json] | jackson-jaxrs-json-provider | 2.9.8 | JSON data binding |
 | [Binding XML][bind-xml] | com.sun.xml.bind:jaxb-impl | 2.3.0 | XML data binding |
 | [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.0 | data binding framework |
