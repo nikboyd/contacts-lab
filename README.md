@@ -85,24 +85,24 @@ Where possible, more recent versions have been used and compatibility issues res
 | Library | Maven | Version | Notes |
 |:------- |:----- |:------- |:----- |
 | [JavaFX][java-fx] | javafx-fxml | 13.0.2 | application framework |
-| [JUnit][junit] | junit:junit | 4.12 | testing framework |
+| [JUnit][junit] | junit:junit | 4.13.1 | testing framework |
 | [Enunciate][enunciate]     | enunciate-swagger | 2.13.3 | API documentation generator |
-| [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.4.5 | JAX-RS web service framework |
-| [Spring][spring] | spring-context | 5.3.10 | dependency injection |
-| [Spring Boot][spring-boot] | spring-boot-starter-web | 2.5.5 | web service self-hosting |
-| [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.6 | JPA repository framework |
-| [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.5.7 | object-relational mapping |
-| [H2][h2-db] | com.h2.database:h2 | 2.0.202 | test object storage |
-| [PostgreSQL][pg-db] | postgresql | 9.4.1212 | general object storage |
+| [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.0 | JAX-RS web service framework |
+| [Spring][spring] | spring-context | 5.3.13 | dependency injection |
+| [Spring Boot][spring-boot] | spring-boot-starter-web | 2.5.7 | web service self-hosting |
+| [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.7 | JPA repository framework |
+| [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.5 | object-relational mapping |
+| [H2][h2-db] | com.h2.database:h2 | 2.1.210 | test object storage |
+| [PostgreSQL][pg-db] | postgresql | 42.2.25 | general object storage |
 | [Validation][valid] | hibernate-validator | 5.4.3 | data validation framework |
 | [JPA][persist] | javax.persistence-api | 2.2 | annotated persistence framework |
 | [Mail][mail] | javax.mail:mail | 1.4.7 | email library |
-| [Time][time] | joda-time:joda-time | 2.10.12 | standard date and time handling |
-| [Binding JSON][bind-json] | jackson-jaxrs-json-provider | 2.12.5 | JSON data binding |
-| [Binding XML][bind-xml] | com.sun.xml.bind:jaxb-impl | 2.3.3 | XML data binding |
-| [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.3 | data binding framework |
+| [Time][std-time] | java.time.* | 8+ | standard time lib, after [Joda-time][joda-time] |
+| [Binding JSON][bind-json] | jackson-jaxrs-json-provider | 2.9.8 | JSON data binding |
+| [Binding XML][bind-xml] | com.sun.xml.bind:jaxb-impl | 2.3.0 | XML data binding |
+| [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.0 | data binding framework |
 | [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.12 | logging abstraction |
-| [Logging Implement][log4j] | log4j-core | 2.17.0 | logging framework |
+| [Logging Implement][log4j] | log4j-core | 2.17.1 | logging framework |
 
 ### Lab Tests
 
@@ -137,7 +137,8 @@ that store and retrieve the domain model objects to and from the backing store.
 [apache-cxf]: https://cxf.apache.org/
 [enunciate]: http://enunciate.webcohesion.com/
 [junit]: https://junit.org/junit4/
-[time]: https://www.joda.org/joda-time/
+[std-time]: https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html
+[joda-time]: https://www.joda.org/joda-time/
 [bind-json]: https://github.com/FasterXML/jackson#providers-for-jax-rs
 [hibernate]: http://hibernate.org/orm/
 [spring]: https://spring.io/projects/spring-framework
