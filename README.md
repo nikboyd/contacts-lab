@@ -88,9 +88,9 @@ Where possible, more recent versions have been used and compatibility issues res
 | [JUnit][junit] | junit:junit | 4.13.1 | testing framework |
 | [Enunciate][enunciate]     | enunciate-swagger | 2.13.3 | API documentation generator |
 | [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.0 | JAX-RS web service framework |
-| [Spring][spring] | spring-context | 5.3.13 | dependency injection |
+| [Spring][spring] | spring-context | 5.3.18 | dependency injection |
 | [Spring Boot][spring-boot] | spring-boot-starter-web | 2.5.12 | web service self-hosting |
-| [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.7 | JPA repository framework |
+| [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.10 | JPA repository framework |
 | [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.5 | object-relational mapping |
 | [H2][h2-db] | com.h2.database:h2 | 2.1.210 | test object storage |
 | [PostgreSQL][pg-db] | postgresql | 42.2.25 | general object storage |
