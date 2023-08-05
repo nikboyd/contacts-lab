@@ -22,6 +22,8 @@ A [lab](#lab-notes) project for managing contact information.
 
 This [lab](#lab-notes) project has been tested and works with both [OpenJDK][open-jdk] 8 and 11, and with 
 the [GraalVM][graal-vm] versions of those. So, make sure you have one of those available.
+That said, [contacts-manager](contacts-manager#overview) app _requires_ JDK 11.
+So, use that by preference if you build the full stack.
 Also, make sure you have a recent version of [Maven][maven] installed.
 
 To build this project, clone this repository. Then, run the following command in the cloned project folder:
@@ -53,7 +55,7 @@ That said, the solution design only solves some of the problems associated with 
 * only the following types of those are supported: HOME, WORK, MOBILE, BILLING, SHIPPING
 * phone numbers and mailing addresses are limited to USA formats
 
-Some of these limitations are in place to support specific illustrative solution features:
+Some of these limitations are in place that support and illustrate specific solution features:
 
 * simpler data models
 * data and format validations
@@ -73,7 +75,7 @@ In spite of these limitations, this project shows some good design choices and p
 * persistence layers built with [Spring Data JPA][spring-jpa]
 * backing storage for objects uses [H2][h2-db] for tests and 
 * anticipates [PostgreSQL][pg-db] for general storage cases
-* the backing database schema is generated from the annotated model classes
+* JPA annotated model classes generate their backing database tables
 
 ### Library Versions
 
@@ -86,10 +88,10 @@ Where possible, more recent versions have been used and compatibility issues res
 |:------- |:----- |:------- |:----- |
 | [JavaFX][java-fx] | javafx-fxml | 13.0.2 | application framework |
 | [JUnit][junit] | junit:junit | 4.13.1 | testing framework |
-| [Enunciate][enunciate]     | enunciate-swagger | 2.13.3 | API documentation generator |
-| [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.0 | JAX-RS web service framework |
-| [Spring][spring] | spring-context | 5.3.18 | dependency injection |
-| [Spring Boot][spring-boot] | spring-boot-starter-web | 2.5.12 | web service self-hosting |
+| [Enunciate][enunciate]     | enunciate-swagger | 2.14.0 | API documentation generator |
+| [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.5 | JAX-RS web service framework |
+| [Spring][spring] | spring-context | 5.3.27 | dependency injection |
+| [Spring Boot][spring-boot] | spring-boot-starter-web | 2.6.15 | web service self-hosting |
 | [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.10 | JPA repository framework |
 | [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.5 | object-relational mapping |
 | [H2][h2-db] | com.h2.database:h2 | 2.1.210 | test object storage |
@@ -101,8 +103,8 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Binding JSON][bind-json] | jackson-jaxrs-json-provider | 2.9.8 | JSON data binding |
 | [Binding XML][bind-xml] | com.sun.xml.bind:jaxb-impl | 2.3.0 | XML data binding |
 | [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.0 | data binding framework |
-| [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.12 | logging abstraction |
-| [Logging Implement][log4j] | log4j-core | 2.17.1 | logging framework |
+| [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.36 | logging abstraction |
+| [Logging Implement][log4j] | log4j-core | 2.20.0 | logging framework |
 
 ### Lab Tests
 
@@ -133,6 +135,12 @@ service needs that ability for proper operation of the RESTish web service API a
 [RepositoryTest][storage-test] ensures that the storage layer works properly for the service layer, esp. those operations
 that store and retrieve the domain model objects to and from the backing store.
 
+### Software BOM
+
+This project uses a few SBOM packages to manage its library dependencies, including those for:
+Spring, Spring Boot, Apache CXF, Log4j.
+This approach helps coordinate specific library versions and their upgrades over time.
+It also comes in handy when addressing security threats raised by associated tooling such as GitHub's depend-a-bot.
 
 [apache-cxf]: https://cxf.apache.org/
 [enunciate]: http://enunciate.webcohesion.com/
