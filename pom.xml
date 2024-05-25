@@ -47,7 +47,7 @@
         <version.apache-cxf>3.5.5</version.apache-cxf>
         <version.slf4j>1.7.30</version.slf4j>
         <version.log4j>2.20.0</version.log4j>
-        <version.crypto>1.76</version.crypto>
+        <version.crypto>1.78.1</version.crypto>
     </properties>
 
     <repositories>
@@ -230,7 +230,7 @@
             </dependency>
             <dependency>
                 <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk15to18</artifactId>
+                <artifactId>bcprov-jdk18on</artifactId>
                 <version>${version.crypto}</version>
             </dependency>
             <dependency>
