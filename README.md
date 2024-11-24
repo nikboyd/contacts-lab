@@ -90,7 +90,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [JUnit][junit] | junit:junit | 4.13.1 | testing framework |
 | [Enunciate][enunciate]     | enunciate-swagger | 2.14.0 | API documentation generator |
 | [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.5 | JAX-RS web service framework |
-| [Spring][spring] | spring-context | 5.3.27 | dependency injection |
+| [Spring][spring] | spring-context | 5.3.39 | dependency injection |
 | [Spring Boot][spring-boot] | spring-boot-starter-web | 2.6.15 | web service self-hosting |
 | [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.10 | JPA repository framework |
 | [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.5 | object-relational mapping |
@@ -105,6 +105,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.0 | data binding framework |
 | [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.36 | logging abstraction |
 | [Logging Implement][log4j] | log4j-core | 2.20.0 | logging framework |
+| [Cryptography][crypto] | bcprov-jdk18on | 1.78.1 | cryptography algorithms |
 
 ### Lab Tests
 
@@ -167,6 +168,7 @@ It also comes in handy when addressing security threats raised by associated too
 [pg-db]: https://en.wikipedia.org/wiki/PostgreSQL
 [slf4j]: https://en.wikipedia.org/wiki/SLF4J
 [log4j]: https://en.wikipedia.org/wiki/Log4j
+[crypto]: https://en.wikipedia.org/wiki/Bouncy_Castle_(cryptography)
 
 [content-test]: contacts-domain/src/test/java/dev/educery/domain/ContentTest.java#L12
 [storage-test]: contacts-domain/src/test/java/dev/educery/domain/RepositoryTest.java#L19
