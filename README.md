@@ -6,7 +6,7 @@ A [lab](#lab-notes) project for managing contact information.
 
 | Section | Notes |
 |:------- |:----- |
-| [contacts-manager](contacts-manager#overview) | a contact manager application |
+| [~contacts-manager~](contacts-manager#overview) | ~a contact manager application~ |
 | [contacts-boot](contacts-boot#overview) | a Spring Boot app for launching the web service |
 | [contacts-service](contacts-service#overview) | a web service for managing contacts |
 | [contacts-storage](contacts-storage#overview) | contact storage classes and types |
@@ -20,11 +20,13 @@ A [lab](#lab-notes) project for managing contact information.
 
 ### Building This Project
 
-This [lab](#lab-notes) project has been tested and works with both [OpenJDK][open-jdk] 8 and 11, and with 
-the [GraalVM][graal-vm] versions of those. So, make sure you have one of those available.
-That said, [contacts-manager](contacts-manager#overview) app _requires_ JDK 11.
-So, use that by preference if you build the full stack.
+This [lab](#lab-notes) project has been tested and works with [OpenJDK][open-jdk] 11 and 17, but not with 21+.
+Later versions require **jakarta** rather than **javax** namespace for some basic Java libraries.
 Also, make sure you have a recent version of [Maven][maven] installed.
+
+The app [contacts-manager](contacts-manager#overview) is _no longer supported_.
+It uses [JavaFX][java-fx], and it no longer starts properly.
+A future version will replace JavaFX with [Thymeleaf][thymeleaf] for hosting the app.
 
 To build this project, clone this repository. Then, run the following command in the cloned project folder:
 
@@ -39,23 +41,21 @@ Test results will appear in the console.
 
 After you build the project, you can [operate the web service locally](contacts-service#contact-service-api) 
 in order to explore and test out the web service through its API.
-While running the web service in a separate command window, you can launch the 
-[contact manager](contacts-manager#operating-locally) from a different command window.
-Alternately, you can launch the [contact manager](contacts-manager#operating-locally) alone.
-It will check whether the web service is running locally. If not, it will launch it.
-You can then [use the contact manager](contacts-manager#gallery) which in turn uses the running web service.
+
+```
+java -jar contacts-boot/target/*.jar
+```
 
 ### Lab Notes
 
-This lab project focuses on solving a set of technical challenges in the context of a limited problem domain:
-**contact management**. 
+This lab focuses on solving some technical challenges within a limited problem domain: **contact management**. 
 That said, the solution design only solves some of the problems associated with contacts:
 
 * contacts can only have associated phone numbers, email addresses, and mailing addresses
 * only the following types of those are supported: HOME, WORK, MOBILE, BILLING, SHIPPING
 * phone numbers and mailing addresses are limited to USA formats
 
-Some of these limitations are in place that support and illustrate specific solution features:
+Some of these limitations support and illustrate specific solution features:
 
 * simpler data models
 * data and format validations
@@ -64,7 +64,7 @@ Some of these limitations are in place that support and illustrate specific solu
 * hashes can then be used for fast indexed searches by the persistence layer
 * saving parts of composite items are handled bottom up, esp. maps and sets
 
-In spite of these limitations, this project shows some good design choices and patterns applicable to web services:
+In spite of these limitations, this lab shows some good design choices and patterns applicable to web services:
 
 * web service self-hosting with [Spring Boot][spring-boot] and embedded [Tomcat][tomcat]
 * REST-like [JAX-RS][jax-rs] web service APIs built with [Apache CXF][apache-cxf]
@@ -86,9 +86,9 @@ Where possible, more recent versions have been used and compatibility issues res
 
 | Library | Maven | Version | Notes |
 |:------- |:----- |:------- |:----- |
-| [JavaFX][java-fx] | javafx-fxml | 13.0.2 | application framework |
+| [JavaFX][java-fx] | javafx-fxml | 17.0.6 | application framework |
 | [JUnit][junit] | junit:junit | 4.13.1 | testing framework |
-| [Enunciate][enunciate]     | enunciate-swagger | 2.14.0 | API documentation generator |
+| [Enunciate][enunciate]     | enunciate-swagger | 2.14.0+ | API documentation generator |
 | [Apache CXF][apache-cxf]   | cxf-rt-rs-client | 3.5.5 | JAX-RS web service framework |
 | [Spring][spring] | spring-context | 5.3.39 | dependency injection |
 | [Spring Boot][spring-boot] | spring-boot-starter-web | 2.6.15 | web service self-hosting |
@@ -154,6 +154,7 @@ It also comes in handy when addressing security threats raised by associated too
 [spring-jpa]: https://spring.io/projects/spring-data-jpa
 [spring-boot]: https://spring.io/projects/spring-boot
 
+[thymeleaf]: https://en.wikipedia.org/wiki/Thymeleaf
 [java-fx]: https://en.wikipedia.org/wiki/JavaFX
 [maven]: https://en.wikipedia.org/wiki/Apache_Maven
 [tomcat]: https://en.wikipedia.org/wiki/Apache_Tomcat
