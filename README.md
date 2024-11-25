@@ -39,8 +39,8 @@ Test results will appear in the console.
 
 ### Project Operation
 
-After you build the project, you can [operate the web service locally](contacts-service#contact-service-api) 
-in order to explore and test out the web service through its API.
+After you build the project, you can [operate the web service locally](contacts-service#contact-service-api).
+Then explore and test out the web service through its [API][local-host] while running it locally:
 
 ```
 java -jar contacts-boot/target/*.jar
@@ -178,3 +178,4 @@ It also comes in handy when addressing security threats raised by associated too
 [test-base]: contacts-service/src/test/java/dev/educery/services/TestBase.java#L11
 [contact-api]: contacts-service/src/main/java/dev/educery/facets/IContactService.java#L12
 [contact-facade]: contacts-service/src/main/java/dev/educery/services/ContactFacade.java#L17
+[local-host]: http://localhost:9001/docs/index.html
