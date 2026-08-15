@@ -93,7 +93,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Spring][spring] | spring-context | 5.3.39 | dependency injection |
 | [Spring Boot][spring-boot] | spring-boot-starter-web | 2.6.15 | web service self-hosting |
 | [Spring Data JPA][spring-jpa] | spring-data-jpa | 2.5.10 | JPA repository framework |
-| [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.5 | object-relational mapping |
+| [Hibernate ORM][hibernate] | hibernate-entitymanager | 5.6.15 | object-relational mapping |
 | [H2][h2-db] | com.h2.database:h2 | 2.1.210 | test object storage |
 | [PostgreSQL][pg-db] | postgresql | 42.2.25 | general object storage |
 | [Validation][valid] | hibernate-validator | 5.4.3 | data validation framework |
@@ -105,7 +105,7 @@ Where possible, more recent versions have been used and compatibility issues res
 | [Binding API][bind-xml] | jakarta.xml.bind-api | 2.3.0 | data binding framework |
 | [Logging Facade][slf4j] | slf4j-log4j12 | 1.7.36 | logging abstraction |
 | [Logging Implement][log4j] | log4j-core | 2.20.0 | logging framework |
-| [Cryptography][crypto] | bcprov-jdk18on | 1.78.1 | cryptography algorithms |
+| [Cryptography][crypto] | bcprov-jdk18on | 1.85+ | cryptography algorithms |
 
 ### Lab Tests
 
