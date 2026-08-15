@@ -46,7 +46,7 @@
         <version.hibernate>5.6.15.Final</version.hibernate>
         <version.apache-cxf>3.5.5</version.apache-cxf>
         <version.slf4j>1.7.36</version.slf4j>
-        <version.log4j>2.20.0</version.log4j>
+        <version.log4j>2.25.5</version.log4j>
         <version.crypto>[1.85,)</version.crypto>
     </properties>
 
